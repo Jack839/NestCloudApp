@@ -35,9 +35,7 @@ class MyAppState extends State<MyApp> {
             
             child:Container(
             margin: EdgeInsets.only(top:120,bottom: 20,right: 20,left: 20),
-            decoration: BoxDecoration(
-              color: Colors.black
-            ),
+            
             
             width: 350,
             color: Colors.cyan  ,
