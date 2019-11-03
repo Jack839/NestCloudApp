@@ -35,7 +35,18 @@ class MyAppState extends State<MyApp> {
             
             child:Container(
             margin: EdgeInsets.only(top:120,bottom: 20,right: 20,left: 20),
-            
+            child: DataTable(
+              columns: [
+                DataColumn(label: Text("Nigga")),
+                DataColumn(label: Text("Fuck"))
+              ],
+              rows: [
+                DataRow(cells: [
+                  DataCell(Text('Nigger')),
+                  DataCell(Text('Bitch'))
+                ])
+              ],
+            ),
             
             width: 350,
             color: Colors.cyan  ,
