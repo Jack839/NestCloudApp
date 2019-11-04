@@ -1,4 +1,4 @@
-#Mon Nov 04 01:15:20 IST 2019
-base.0=/home/subhadeep1912/pros/NestCloudApp/app/build/app/intermediates/transforms/dexMerger/debug/0
+#Tue Nov 05 02:52:00 IST 2019
+base.0=/home/ninadsutrave/projects/Flutter/NestCloudApp/app/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

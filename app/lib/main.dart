@@ -64,11 +64,9 @@ class MyApp extends StatelessWidget {
             alignment: new Alignment(-0.92, -0.87),
 
             child: Container(
-                  decoration: BoxDecoration(
-                            border: Border.all(color: Colors.blueAccent)
-                          ),
+                  
                  child: new Text(
-                'NestCloudApp' ,style: new TextStyle(color: Colors.black, fontSize: 23.0, fontWeight: FontWeight.bold))
+                'NestCloudApp' ,style: new TextStyle(color: Colors.black, fontSize: 20.0))
 
             ),
           ),
