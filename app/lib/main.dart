@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    var button2 = RaisedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Screen2())); }, child: Text('CLICK'), );
     return MaterialApp( 
 
       theme: ThemeData(
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
 
       home: Scaffold(
 
-        body: SafeArea( child: _createStack(), ),
+        body: SafeArea( child: _createStack(button2), ),
                
        
       )
@@ -24,103 +25,100 @@ class MyApp extends StatelessWidget {
              
   }
 
-  _createStack() {
+  _createStack(var button2) {
     return new Stack(
-        children: <Widget>[
 
-            new Align(
+      children: <Widget>[
 
-            alignment: new Alignment(0.0, 0.0),
-            child: Container(
+        new Align(
 
-              child: MyApp2(),
+          alignment: new Alignment(0.0, 0.0),
 
-            ),
+          child: Container(
 
-            ),
+            child: MyApp2(),
 
-            new Align(
-
-            alignment: const Alignment(-0.95, -1.25),
-
-            child: new Container( 
-
-              height: 200.0,
-              width: 150.0,
-
-              constraints: BoxConstraints(
-                maxHeight: 200.0,
-                maxWidth: 150.0,
-              ),
-              
-              child: Image.asset('assets/images/logo_black_transparent.png'),
-
-            )
           ),
+
+        ),
+
+        new Align(
+
+          alignment: const Alignment(-0.95, -1.25),
+
+          child: new Container( 
+
+            height: 200.0,
+            width: 150.0,
+
+            constraints: BoxConstraints(
+            maxHeight: 200.0,
+            maxWidth: 150.0,
+            ),
+              
+            child: Image.asset('assets/images/logo_black_transparent.png'),
+
+          )
+        ),
 
           
 
-          new Align(
-            alignment: new Alignment(-0.92, -0.87),
+        new Align(
+          alignment: new Alignment(-0.92, -0.87),
 
-            child: Container(
+          child: Container(
                   
-                 child: new Text(
-                'NestCloudApp' ,style: new TextStyle(color: Colors.black, fontSize: 20.0))
-
-            ),
-          ),
-
-          new Align(
-
-            alignment: new Alignment(-0.90, -0.80),
-
-            child: Container (child: Divider()),
+            child: new Text(
+            'NestCloudApp' ,style: new TextStyle(color: Colors.black, fontSize: 20.0))
 
           ),
+        ),
+
+        new Align(
+
+          alignment: new Alignment(-0.90, -0.80),
+
+          child: Container (child: Divider()),
+
+        ),
 
 
 
-          new Align(
+        new Align(
 
             alignment: new Alignment(1.0, -1.0),
-            child: RaisedButton(
-              
-              child: Text('CLICK'),
-
-              onPressed: () {}
-                
-              )
-
+            child: button2,
           
-            ),
+        ),
           
 
-          new Align(
+        new Align(
             
-            alignment: new Alignment( -0.80, -0.80), 
+          alignment: new Alignment( -0.80, -0.80), 
 
-            child: new Container (
+          child: new Container (
 
                         
-            margin: EdgeInsets.only(top: 100, bottom: 60, right: 15, left: 15),
+          margin: EdgeInsets.only(top: 100, bottom: 60, right: 15, left: 15),
             
 
-            child: ClipRRect(
-                borderRadius: BorderRadius.circular(20.0),
-                  child: Container(
-                      height: 800.0,
-                      width: double.infinity,
-                      color: Colors.lightBlue[100],
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20.0),
+       
+            child: Container(
+                    height: 800.0,
+                    width: double.infinity,
+                    color: Colors.lightBlue[100],
 
-
+                    child: Scrollbar(
                        
                       child: SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
+                        scrollDirection: Axis.vertical,
+
+                        child: SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
                       
-                    child:  DataTable(
+                          child:  DataTable(
 
               columns: [
 
@@ -334,15 +332,17 @@ class MyApp extends StatelessWidget {
 
               ],
 
-              ))
-                  )
+              )                    
+                            )
+                        )
 
+                  ),
 
+              ),
+          ),
         ),
-        ),
-    ),
-          ),          
-        ]   
+    ),          
+      ]   
     );
   }
 
@@ -381,4 +381,13 @@ class MyApp2State extends State<MyApp2> {
 
 
 
+}
+
+class Screen2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    
+    return Scaffold(body: Text("Screen2"),);
+  }
+  
 }
