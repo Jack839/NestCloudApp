@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     var button2 = RaisedButton(
+      child: Text("CLICK"),
       onPressed: () {
   Navigator.push(
     context,
@@ -50,12 +51,12 @@ class MyApp extends StatelessWidget {
 
         new Align(
 
-          alignment: const Alignment(-0.95, -1.28),
+          alignment: const Alignment(-0.95, -1.23),
 
           child: new Container( 
 
-            height: 200.0,
-            width: 150.0,
+            height: 240.0,
+            width: 190.0,
 
             constraints: BoxConstraints(
             maxHeight: 200.0,
@@ -75,7 +76,7 @@ class MyApp extends StatelessWidget {
           child: Container(
                   
             child: new Text(
-            'NestCloudApp' ,style: new TextStyle(color: Colors.black, fontSize: 20.0))
+            'NestCloudApp' ,style: new TextStyle(color: Colors.black, fontSize: 17.0))
 
           ),
         ),
@@ -92,7 +93,7 @@ class MyApp extends StatelessWidget {
 
         new Align(
 
-            alignment: new Alignment(1.0, -1.0),
+            alignment: new Alignment(0.95, -1.0),
             child: button2,
             
           
@@ -332,9 +333,7 @@ class MyApp extends StatelessWidget {
                   DataCell(Text("Item")),
                   
                   ]
-                )
-
-                      
+                )     
                 
 
               ],
