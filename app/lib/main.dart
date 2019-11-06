@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'lsit.dart';
 void main() => runApp(MyApp());
 
 
@@ -8,12 +9,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    var button2 = RaisedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Screen2())); }, child: Text('CLICK'), );
+    var button2 = RaisedButton(
+      onPressed: () {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => Screen2()),
+  );
+}
+    );
     return MaterialApp( 
 
-      theme: ThemeData(
-          primarySwatch: Colors.red,
-        ) ,
+      
 
       home: Scaffold(
 
@@ -44,7 +50,7 @@ class MyApp extends StatelessWidget {
 
         new Align(
 
-          alignment: const Alignment(-0.95, -1.25),
+          alignment: const Alignment(-0.95, -1.28),
 
           child: new Container( 
 
@@ -88,6 +94,7 @@ class MyApp extends StatelessWidget {
 
             alignment: new Alignment(1.0, -1.0),
             child: button2,
+            
           
         ),
           
@@ -108,7 +115,7 @@ class MyApp extends StatelessWidget {
             child: Container(
                     height: 800.0,
                     width: double.infinity,
-                    color: Colors.lightBlue[100],
+                    
 
                     child: Scrollbar(
                        
@@ -366,7 +373,7 @@ class MyApp2State extends State<MyApp2> {
 
              bottomNavigationBar: BottomNavigationBar(
                
-                    backgroundColor: Colors.lightBlueAccent[100],
+                    
                     onTap: (newIndex) => setState(() => _index = newIndex),
                     currentIndex: _index,
                     
@@ -381,13 +388,4 @@ class MyApp2State extends State<MyApp2> {
 
 
 
-}
-
-class Screen2 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    
-    return Scaffold(body: Text("Screen2"),);
-  }
-  
 }
